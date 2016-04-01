@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Have you heard?</title>
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Bird bird bird?</h2>
+        <form enctype="multipart/form-data" method="POST" action="/">
+            <div class="form-group">
+                <label for="birdFile">Upload Image</label>
+                <input type="file" name="bird_image" id="birdFile">
+            </div>
+            <button type="submit" class="btn btn-success">What's the word?</button>
+        </form>
+
+        {% if bird is defined%}
+            {% if bird %}
+                <h1>BUH BUH BUH BIRD BIRD BIRD, THE BIRD IS THE WORD</h1>
+            {% else %}
+                <h1>Bird is NOT the word.</h1>
+            {% endif %}
+        {% endif %}
+    <a href="/about"><h4>What is this crap?</h4></a>
+    </div>
+
+</body>
+</html>
